@@ -2,7 +2,7 @@
 
 ## How to use
 
-1. Add this line to inject the one page javascript. Ideally in the *<head>*
+1. Add this line to inject the one page javascript. Ideally in the *\<head\>-tag
 
 ```
 js('/media/plugins/studio-bu/onepage/onepage.js')
