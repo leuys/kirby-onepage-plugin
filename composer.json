@@ -1,0 +1,16 @@
+{
+    "name": "studio-bu/onepage",
+    "description": "Kirby One Page Plugin",
+    "license": "MIT",
+    "type": "kirby-plugin",
+    "version": "1.0.0",
+    "authors": [
+        {
+            "name": "Benjamin Unterluggauer",
+            "email": "mail@leuys.com"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    }
+}
