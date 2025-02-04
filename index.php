@@ -3,8 +3,13 @@
 Kirby::plugin('studio-bu/onepage', [
   'hooks' => [
     'page.render:after' => function ($html, $page) {
-      $scriptTag = '<script>const rootPath="'.kirby()->url().'";const onePageConfig='.json_encode(option('onepage')).';</script>';
-      return str_replace('</head>', $scriptTag.'</head>', $html);
+      if( option('onepage.active') ){
+        $onepageScript = js('/media/plugins/studio-bu/onepage/onepage.js');
+        $scriptTag = '<script>const rootPath="'.kirby()->url().'";const onePageConfig='.json_encode(option('onepage')).';</script>';
+        $styleTag = '<style>:root{--page-transition-duration:'.option('onepage.transitionDuration').'ms;}</style>';
+        return str_replace('</head>', $scriptTag.$styleTag.$onepageScript.'</head>', $html);
+      }
+      
     }
   ],
   'routes' => [
