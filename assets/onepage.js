@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', initNavLinks);
 function initNavLinks(){
   const internalLinks = Array.from(document.querySelectorAll('a')).filter(link => {
     const href = link.getAttribute('href');
-    return href && ((href.startsWith('/') || href.includes(window.location.hostname)) && !href.includes('mailto') );
+    return href && ((href.startsWith('/') || href.includes(window.location.hostname)) && !href.includes('mailto:') );
   });
   internalLinks.forEach((navLink) => {
     navLink.onclick = function(event){
